@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+/* body{
+    margin: 0px;
+} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+.aln-cntr {
+    align-self: center;
+}
+
+.blk {
+    display: block;
+}
+.row {
+    display: flex;
+    gap: 20px;
+}
+.col-1 {
+    flex: 8.33%;
+}
+
+.col-2 {
+    flex: 16.66%;
+}
+
+.col-3 {
+    flex: 25%;
+}
+
+.col-4 {
+    flex: 33.33%;
+}
+
+.col-5 {
+    flex: 41.66%;
+}
+
+.col-6 {
+    flex: 50%;
+}
+
+.col-7 {
+    flex: 58.33%;
+}
+
+.col-8 {
+    flex: 66.66%;
+}
+
+.col-9 {
+    flex: 75%;
+}
+
+.col-10 {
+    flex: 83.33%;
+}
+
+.col-11 {
+    flex: 91.66%;
+}
+
+.col-12 {
+    flex: 100%;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-8 {
+    margin-bottom:8px;
+}
+body.dx-device-desktop.dx-device-generic {
+    background-color: #f6f6f69c;
+}
+.form-container {
+    padding: 10px 0px;
+}
+.dx-field.d-flex {
+    display: flex;
+    align-items: center;
+}
+.dx-field.d-flex span {
+    margin-right: 4px;
+    font-size: 8px;
+    font-weight: 400;
+    color: rgb(47 113 102);
+}
+
+.dx-dropdowneditor.dx-dropdowneditor-field-clickable {
+    cursor: pointer;
+    border-radius: 7px;
+}
+.dx-field-label {
+    float: none;
+    width: 100%;
+    font-size: 8px;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0px;
+}
+.dx-field.d-flex.form-group {
+    flex-direction: column;
+}
+.dx-field-value, .dx-field-value-static {
+    float: none;
+    width: 100% !important;
+}
+.form-group{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.flex-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.mx-width{
+    max-width: 224px;
+}
+h5.section-heading {
+    font-size: 10px;
+    width: 100%;
+    border-bottom: 1px solid #04040461;
+    margin-bottom: 6px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+}
+.dx-texteditor.dx-editor-outlined {
+    border-color: #b7b7b754;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.details-box {
+    margin-bottom: 8px;
+}
+.form-container .dx-texteditor-input {
+    padding: 5px;
+    font-size: 8px;
+    min-height: 20px;
+}
+
+.dx-widget {
+    font-size: 11px;
+}
+.add-more .dx-button.dx-widget.dx-button.dx-button-mode-contained.dx-button-normal.dx-button-has-icon {
+    border-radius: 4px;
+    float: none;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+}
+.add-more .dx-button-has-icon .dx-icon {
+    width: auto;
+    height: auto;
+    font-size: 8px;
+}
+.autoGenerate{
+    background-color: #e1e1e1 !important;
+}
+.mandatory-clr{
+    background-color: #fff183 !important;
+}
+.dx-item-content.dx-list-item-content {
+    font-size: 8px;
+    padding: 5px;
+}
+.dx-dropdownlist-popup-wrapper .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item-content {
+    padding: 6px;
+}
+i.dx-icon.dx-icon-plus {
+    font-size: 10px;
+    height: 10px;
+    width: 10px;
+}
+.dx-datebox-date .dx-dropdowneditor-icon::before,.dx-dropdowneditor-icon::before {
+    font-size: 10px;
+}
+#gridContainer .dx-datagrid-headers.dx-datagrid-nowrap.dx-bordered-top-view {
+    /* background: #2f7166; */
+    background: #00aaad;
+}
+.dx-placeholder::before {
+    color: #191919 !important;
+    font-size: 8px;
+    padding: 0px 5px;
+}
+
+tr.dx-row.dx-data-row.dx-row-lines td {
+    font-size: 8px;
+    color: #000;
+    text-align: center !important;
+    border-left: 1px solid #ddd;
+}
+.dx-datagrid-headers .dx-datagrid-table .dx-row > td {
+    text-align: center!important;
+    border-left: 1px solid #ddd;
+}
+.dx-datagrid-text-content {
+    color: #fff;
+}
+tr.dx-row.dx-header-row td, tr.dx-row.dx-header-row {
+    padding: 4px 5px;
+    font-size: 9px;
+}
+#gridContainer {
+    margin-bottom: 10px;
+}
+.dx-datagrid .dx-row > td {
+    padding: 4px;
+}
+.dx-button-has-icon .dx-button-content {
+    padding: 4px;
+}
+.dx-field {
+    min-height: auto;
+    margin: 0;
+}
+.dx-numberbox-spin-up-icon, .dx-numberbox-spin-down-icon {
+    font-size: 10px;
+}
+/* .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected {
+    background-color: rgb(209 209 209 / 48%) !important;
+}
+.dx-item .dx-list-item .dx-state-hover{
+    background-color: rgb(209 209 209 / 48%) !important;
+}
+.dx-item .dx-list-item .dx-state-active{
+    background-color: rgb(209 209 209 / 48%) !important;
+} */
+.dx-state-focused{
+    border-color: #2f7166;
+}
+.dx-datagrid .dx-sort-up, .dx-datagrid .dx-sort-down{
+    font-size: 8px;
+}
+.dx-datagrid > .dx-datagrid-headers {
+    /* background-color: #2f7166; */
+    background: #00aaad;
+}
+.document-table {
+    margin-bottom: 10px;
+}
+.doc-file {
+    font-size: 8px;
+}
+.clrGreen {
+    font-weight: 600;
+}
+.credit-limit {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: #00aaad;
+}
+.credit-limit h4 {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 5px;
+    color: #ffffff;
+    font-weight: 500;
+    border-bottom: 1px solid #ccccccb5;
+}
+.credit-scores p {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    column-gap: 10px;
+    color: #Fff;
+}
+.score-alphabets p {
+    font-size: 11px;
+    text-align: center;
+    padding: 8px 5px;
+    color: #ffffff;
+    font-weight: 500;
+    background: #008c8e;
+}
+.credit-scores {
+    padding: 10px 0px;
+}
+
+span.dx-button-text {
+    font-size: 8px;
+}
+.dx-button-has-text .dx-button-content {
+    padding: 4px;
+}
+.add-documents {
+    margin-top: 10px;
+}
+.form-btns {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.btn span.dx-button-text {
+    font-size: 10px;
+}
+.draft-btn.btn {
+    width: 100%;
+}
+.btn .dx-button-mode-contained {
+    width: 100%;
+}
+.dx-button-mode-contained.dx-button-success {
+    background-color:none;
+    color: #fff;
+}
+.dx-datebox-wrapper-calendar .dx-calendar {
+    margin: 8px;
+}
+.dx-button-has-icon .dx-icon {
+    width: 11px;
+    height: 12px;
+    font-size: 8px;
+}
+.dx-calendar-body thead th {
+    font-size: 7px;
+}
+td.dx-calendar-cell {
+    width: 8px;
+    height: 8px;
+    font-size: 8px;
+}
+
+@media (max-width:1024px) {
+    .container {
+        padding: 0px 10px;
+    }
+}
+@media (max-width:768px) {
+    .row{
+        flex-direction: column;
+    }
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+      flex: 100%;
+    }
+   
+}
+@media (max-width:550px) {
+    tr.dx-row.dx-header-row td, tr.dx-row.dx-header-row {
+        padding: 3px;
+        font-size: 8px;
+    }
+    .form-container .dx-texteditor-input {
+        padding: 4px;
+        font-size: 7px;
+    }
+}
