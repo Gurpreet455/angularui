@@ -1,6 +1,6 @@
 <main>
   <div class="container">
-    <div class="form-container">
+    <form class="form-container">
       <div class="row">
         <div class="col-8">
            <!-- dealer details -->
@@ -77,6 +77,129 @@
     </div>
     <div class="details-box">
       <h5 class="section-heading">Item Details</h5>
+      <div class="flex-input justify-end">
+      <!-- popup  -->
+      <div class="select-filed">
+      <div class="popup-box">
+        <dx-button
+        text="Add Data"
+        (onClick)="togglePopup()">
+      </dx-button>
+      <dx-popup
+        title="Item Details"
+        [(visible)]="isPopupVisible"
+        contentTemplate="popupContent">
+      <div *dxTemplate="let data of 'popupContent'"
+      >
+          <div class="widget-container form-container">
+            <div class="flex-input">
+              <!-- product -->
+                <div class="dx-field form-group">
+                  <div class="dx-field-label">Product</div>
+                  <div class="dx-field-value">
+                    <dx-select-box
+                    [items]="['Product-1', 'Product-2','Product-3']"
+                    ></dx-select-box>
+                  </div>
+                </div>
+              <!-- model -->
+                <div class="dx-field form-group">
+                  <div class="dx-field-label">Model</div>
+                  <div class="dx-field-value">
+                    <dx-select-box
+                    [items]="['Model-1', 'Model-2','Model-3']"
+                    ></dx-select-box>
+                  </div>
+                </div>
+              <!-- varient -->
+                <div class="dx-field form-group">
+                  <div class="dx-field-label">Varient</div>
+                  <div class="dx-field-value">
+                    <dx-select-box
+                    [items]="['Varient-1', 'Varient-2','Varient-3']"
+                    ></dx-select-box>
+                  </div>
+                </div>
+             </div>
+             <div class="flex-input">
+              <!-- product -->
+              <!-- model des-->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Model Description</div>
+                <div class="dx-field-value">
+                  <dx-text-box
+                    placeholder="Model Description"
+                  ></dx-text-box>
+                </div>
+              </div>
+              <!-- quanity -->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Quantity</div>
+                <div class="dx-field-value">
+                  <dx-number-box
+                  [min]="0"
+                  placholder="Quantity"
+                    [showSpinButtons]="true"
+                    [inputAttr]="{ 'aria-label': 'Min And Max' }"
+                  ></dx-number-box>
+                </div>
+              </div>
+              <!-- unit price -->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Unit Price</div>
+                <div class="dx-field-value">
+                  <dx-number-box
+                  placeholder="Unit Price"
+                  ></dx-number-box>
+                </div>
+              </div>
+             </div>
+             <div class="flex-input">
+              <!-- product -->
+              <!-- amount-->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Amount</div>
+                <div class="dx-field-value">
+                  <dx-number-box
+                    placeholder="Amount"
+                  ></dx-number-box>
+                </div>
+              </div>
+              <!-- req date -->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Req Date</div>
+                <div class="dx-field-value">
+                  <dx-date-box
+                  placholder="Req Date"
+                  ></dx-date-box>
+                </div>
+              </div>
+              <!-- payment -->
+              <div class="dx-field d-flex form-group">
+                <div class="dx-field-label">Payment Type</div>
+                <div class="dx-field-value">
+                  <dx-select-box
+                  [items]="['Payment-1','Payment-1','Payment-1']"
+                  
+                  ></dx-select-box>
+                </div>
+              </div>
+        
+             </div>
+             <dx-button
+             class="add-items"
+                stylingMode="contained"
+                text="Add Data"
+                type="default">
+              </dx-button>
+             
+          </div>
+      </div>
+  </dx-popup>
+      </div>
+      </div>
+      <!-- popup -->
+      </div>
       <!-- product table -->
       <dx-data-grid
         id="gridContainer"
@@ -97,102 +220,6 @@
       </dx-data-grid>
       <!-- product table -->
       <!-- product values -->
-       <div class="flex-input">
-        <!-- product -->
-          <div class="dx-field form-group">
-            <div class="dx-field-label">Product</div>
-            <div class="dx-field-value">
-              <dx-select-box
-              [items]="['Product-1', 'Product-2','Product-3']"
-              ></dx-select-box>
-            </div>
-          </div>
-        <!-- model -->
-          <div class="dx-field form-group">
-            <div class="dx-field-label">Model</div>
-            <div class="dx-field-value">
-              <dx-select-box
-              [items]="['Model-1', 'Model-2','Model-3']"
-              ></dx-select-box>
-            </div>
-          </div>
-        <!-- varient -->
-          <div class="dx-field form-group">
-            <div class="dx-field-label">Varient</div>
-            <div class="dx-field-value">
-              <dx-select-box
-              [items]="['Varient-1', 'Varient-2','Varient-3']"
-              ></dx-select-box>
-            </div>
-          </div>
-  
-       </div>
-       <div class="flex-input">
-        <!-- product -->
-        <!-- model des-->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Model Description</div>
-          <div class="dx-field-value">
-            <dx-text-box
-              placeholder="Model Description"
-            ></dx-text-box>
-          </div>
-        </div>
-        <!-- quanity -->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Quantity</div>
-          <div class="dx-field-value">
-            <dx-number-box
-            [min]="0"
-            placholder="Quantity"
-              [showSpinButtons]="true"
-              [inputAttr]="{ 'aria-label': 'Min And Max' }"
-            ></dx-number-box>
-          </div>
-        </div>
-        <!-- unit price -->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Unit Price</div>
-          <div class="dx-field-value">
-            <dx-number-box
-            placeholder="Unit Price"
-            ></dx-number-box>
-          </div>
-        </div>
-  
-       </div>
-       <div class="flex-input">
-        <!-- product -->
-        <!-- amount-->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Amount</div>
-          <div class="dx-field-value">
-            <dx-number-box
-              placeholder="Amount"
-            ></dx-number-box>
-          </div>
-        </div>
-        <!-- req date -->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Req Date</div>
-          <div class="dx-field-value">
-            <dx-date-box
-            placholder="Req Date"
-            ></dx-date-box>
-          </div>
-        </div>
-        <!-- payment -->
-        <div class="dx-field d-flex form-group">
-          <div class="dx-field-label">Payment Type</div>
-          <div class="dx-field-value">
-            <dx-select-box
-            [items]="['Payment-1','Payment-1','Payment-1']"
-            
-            ></dx-select-box>
-          </div>
-        </div>
-  
-       </div>
        <div class="add-more">
         <div class="dx-field-value ">
           <dx-button icon="plus"> </dx-button>
@@ -203,6 +230,7 @@
           <div class="dx-field-label">Special Request</div>
           <div class="dx-field-value">
             <dx-text-box
+            class="xl-height"
               placeholder="Special Request"
             ></dx-text-box>
           </div>
@@ -211,33 +239,13 @@
           <div class="dx-field-label">Remark</div>
           <div class="dx-field-value">
             <dx-text-box
+            class="xl-height"
               placeholder="Remark"
             ></dx-text-box>
           </div>
         </div>
        </div>
       <!-- product values -->
-          <!-- price container -->
-          <div class="price-box">
-            <!-- product table -->
-     <h5 class="section-heading">Charge Details</h5>
-            <dx-data-grid
-            id="customGrid"
-            #grid
-            [dataSource]="data"
-            keyExpr="ID"
-            [showColumnLines]="true"
-            [showRowLines]="true"
-            [showBorders]="true"
-            [rowAlternationEnabled]="true"
-        >
-            <dxi-column dataField="chargeCode" caption="Charge Code"></dxi-column>
-            <dxi-column dataField="price" caption="Price"></dxi-column>
-            <dxi-column dataField="amount" caption="Amount"></dxi-column>
-        </dx-data-grid>
-       </div>
-        <!-- price container -->
-         
          <!-- document table -->
          <div class="document-table">
           <h5 class="section-heading">Documents Details</h5>
@@ -302,23 +310,199 @@
               </div>
              <!-- document table -->
     </div>
-    
         </div>
         <div class="col-4 aln-cntr">
-         <!-- credit limit -->
-          <div class="credit-limit">
-             <h4>Credit Limit Status</h4>
-             <div class="credit-scores">
-              <p><span>Credit Limit Status</span><span>1,12,25,000/-</span></p>
-              <p><span>OutStanding Balance</span><span>1,00,00,000/-</span></p>
-              <p class="clrGreen"><span>Balance</span><span>12,25,000/-</span></p>
-             </div>
-             <div class="score-alphabets">
-              <p>Twelve Lacks Twenty five Thousand</p>
-             </div>
+          <!-- price container -->
+          <div class="price-box">
+            <!-- product table -->
+             <h5 class="section-heading">Charge Details</h5>
+            <dx-data-grid
+            id="customGrid"
+            #grid
+            [dataSource]="data"
+            keyExpr="ID"
+            [showColumnLines]="true"
+            [showRowLines]="true"
+            [showBorders]="true"
+            [rowAlternationEnabled]="true"
+        >
+            <dxi-column dataField="chargeCode" caption="Charge Code"></dxi-column>
+            <dxi-column dataField="price" caption="Price"></dxi-column>
+            <dxi-column dataField="amount" caption="Amount"></dxi-column>
+        </dx-data-grid>
+       </div>
+        <!-- price container -->
+        <!-- credit limit -->
+        <div class="credit-limit">
+          <h4>Credit Limit Status</h4>
+          <div class="credit-scores">
+           <p><span>Credit Limit Status</span><span>1,12,25,000/-</span></p>
+           <p><span>OutStanding Balance</span><span>1,00,00,000/-</span></p>
+           <p class="clrGreen"><span>Balance</span><span>12,25,000/-</span></p>
           </div>
+          <div class="score-alphabets">
+           <p>Twelve Lacks Twenty five Thousand</p>
+          </div>
+       </div>
+      <!-- credit limit -->
         </div>
       </div>
-    </div>
+    </form>
   </div>
+  <!-- <div class="container">
+    <form action="#" >
+      <div class="drop-down-menu">
+        <dx-select-box
+        [items]="['page', 'allPages']"
+        [inputAttr]="{ 'aria-label': 'Select All Mode' }"
+      >
+      </dx-select-box>
+      </div>
+      <div class="drop-down">
+        <dx-drop-down-box
+        placeholder="Menu">
+          <dx-list 
+              [dataSource]="fruits"
+          >
+          </dx-list>
+      </dx-drop-down-box>
+      </div>
+      <div class="counter-box">
+        <div style="text-align: center;">
+          <h1>Counter: {{ counter }}</h1>
+          <dx-button
+            text="Plus"
+            (onClick)="increment()">
+          </dx-button>
+          <dx-button
+            text="Minus"
+            (onClick)="decrement()">
+          </dx-button>
+        </div>
+      </div>
+      <div class="menu-box">
+        <dx-menu>
+            <dxi-item 
+                text="home"
+            >
+            </dxi-item>
+            <dxi-item 
+                text="About"
+            >
+            <dxi-item
+            text="About1">
+              
+            </dxi-item>
+            </dxi-item>
+            <dxi-item 
+                text="Products"
+            >
+            </dxi-item>
+            <dxi-item 
+                text="cart"
+            >
+            </dxi-item>    
+        </dx-menu>
+    </div>
+    <div class="toast-box">
+      <dx-toast [(visible)]="isVisible" type="info" message=""></dx-toast>
+    </div>
+    <div class="radio-btn-box">
+      <dx-radio-group
+    [dataSource]="gender"
+    value="Low">
+</dx-radio-group>
+    </div>
+     <div class="password-box">
+      <dx-text-box
+    mode="password">
+</dx-text-box>
+     </div>
+     <div class="check-box">
+      <div class="dx-field">
+      <div class="dx-field-label">Checked</div>
+      <div class="dx-field-value">
+        <dx-check-box
+          [value]="false"
+        ></dx-check-box>
+      </div>
+    </div>
+      <div class="dx-field">
+      <div class="dx-field-label">Checked 1</div>
+      <div class="dx-field-value">
+        <dx-check-box
+        ></dx-check-box>
+      </div>
+    </div>
+      <div class="dx-field">
+      <div class="dx-field-label">Checked 2</div>
+      <div class="dx-field-value">
+        <dx-check-box
+        ></dx-check-box>
+      </div>
+    </div>
+     </div>
+    </form>
+  </div> -->
+  <!-- <div class="container">
+    <form action="#" class="valid-form form-container">
+       <div class="name-field form-group">
+        <div class="dx-field">
+          <div class="dx-field-label">Name</div>
+          <div class="dx-field-value">
+            <dx-text-box
+              placeholder="John Doe"
+              [inputAttr]="{ 'aria-label': 'Full Name' }"
+            ></dx-text-box>
+          </div>
+        </div>
+       </div>
+       <div class="email-field form-group">
+        <div class="dx-field-label">Email</div>
+        <dx-text-box
+        placeholder="johndoe@example.com"
+        > 
+          <dx-validator>
+              <dxi-validation-rule 
+                  type="email" 
+                  message="My custom message">
+              </dxi-validation-rule>
+          </dx-validator>
+      </dx-text-box>
+       </div>
+       <div class="mobile-field">
+        <div class="dx-field">
+          <div class="dx-field-label">Mobile Number</div>
+          <div class="dx-field-value">
+            <dx-number-box
+              [(value)] = 'mobileNumberValue'
+              placeholder="0123456789"
+              [min]="20"
+            ></dx-number-box>
+          </div>
+        </div>
+       </div>
+       <div class="select-country">
+        <div class="dx-field">
+          <div class="dx-field-label">Country</div>
+          <div class="dx-field-value">
+            <dx-select-box
+              [items]='["india","England"]'
+              validationMessagePosition="left"
+            >
+              <dx-validator>
+                <dxi-validation-rule
+                  type="required"
+                  message="Country is required"
+                ></dxi-validation-rule>
+              </dx-validator>
+            </dx-select-box>
+          </div>
+        </div>
+       </div>
+       <div class="submit-btn">
+        <input type="button" value="Submit" />
+       </div>
+    </form>
+  </div> -->
 </main>
